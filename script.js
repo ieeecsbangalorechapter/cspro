@@ -96,3 +96,29 @@ function drawConstellation() {
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 drawConstellation();
+
+// -----------------------------
+// Session Tabs
+// -----------------------------
+const sessionTabs = document.querySelectorAll("[data-session-tab]");
+const sessionPanels = document.querySelectorAll("[data-session-panel]");
+
+sessionTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    const selected = tab.dataset.sessionTab;
+
+    // Update cards
+    sessionTabs.forEach(t => {
+      const active = t === tab;
+      t.classList.toggle("is-active", active);
+      t.setAttribute("aria-selected", active);
+    });
+
+    // Update content
+    sessionPanels.forEach(panel => {
+      const active = panel.dataset.sessionPanel === selected;
+      panel.classList.toggle("is-active", active);
+      panel.hidden = !active;
+    });
+  });
+});

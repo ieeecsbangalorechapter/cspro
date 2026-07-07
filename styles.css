@@ -80,42 +80,44 @@ a {
 }
 
 .logo-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .logo-card {
-  display: flex;
-  min-height: 76px;
-  align-items: center;
-  gap: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.96);
-  padding: 0.8rem 1.2rem;
-  color: #082044;
-  box-shadow: 0 22px 45px -28px rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 0.8rem 1.4rem;
+    min-width: 220px;
+    min-height: 90px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
 }
 
-.logo-mark {
-  display: grid;
-  min-width: 54px;
-  min-height: 44px;
-  place-items: center;
-  border: 2px solid #0a4c88;
-  color: #0a4c88;
-  font-weight: 800;
-  letter-spacing: 0;
+.logo-image {
+    max-width: 180px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
-.logo-name {
-  max-width: 150px;
-  text-align: left;
-  font-size: 0.82rem;
-  font-weight: 700;
-  line-height: 1.2;
+@media (max-width: 760px) {
+    .logo-card {
+        min-width: 180px;
+        min-height: 75px;
+        padding: 0.6rem 1rem;
+    }
+
+    .logo-image {
+        max-width: 140px;
+        max-height: 50px;
+    }
 }
 
 .eyebrow,
