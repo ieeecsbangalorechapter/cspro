@@ -121,11 +121,11 @@
 
           <div class="session-grid" role="tablist" aria-label="CS Pro sessions">
             <button
-              class="session-card is-active"
+              class="session-card"
               type="button"
               role="tab"
               id="leadership-tab"
-              aria-selected="true"
+              aria-selected="false"
               aria-controls="leadership-panel"
               data-session-tab="leadership"
             >
@@ -161,11 +161,12 @@
 
           <div class="session-panels">
             <section
-              class="session-panel is-active"
+              class="session-panel"
               id="leadership-panel"
               role="tabpanel"
               aria-labelledby="leadership-tab"
               data-session-panel="leadership"
+              hidden
             >
               <div class="panel-intro">
                 <p class="section-label">Leadership Connect</p>
